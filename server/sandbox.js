@@ -1,5 +1,10 @@
 /* eslint-disable no-console, no-process-exit */
 const michelin = require('./michelin');
+const restaurant = michelin.get();
+
+restaurant.forEach(restaurant => {
+  console.log(restaurant.name);
+})
 
 async function sandbox (searchLink = 'https://guide.michelin.com/fr/fr/centre-val-de-loire/veuves/restaurant/l-auberge-de-la-croix-blanche') {
   try {
